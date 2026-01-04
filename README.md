@@ -43,6 +43,19 @@ Le script :
 |----------|-------------|
 | `/usage-stats` | Affiche les statistiques d'utilisation des outils |
 
+### Plugins (externes)
+
+Installés via marketplace, référencés dans `settings.json` :
+
+| Plugin | Source | Description |
+|--------|--------|-------------|
+| `typescript-lsp` | claude-plugins-official | LSP TypeScript pour navigation code |
+| `ralph-wiggum` | claude-plugins-official | Technique de réflexion itérative |
+| `frontend-design` | claude-plugins-official | Design frontend production-grade |
+| `superpowers` | superpowers-marketplace | Skills workflow (TDD, debugging, planning, etc.) |
+
+Installation : `claude mcp add <plugin>` ou via UI Claude Code.
+
 ## Configuration
 
 | Fichier | Contenu |

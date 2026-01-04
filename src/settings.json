@@ -1,0 +1,85 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(yarn:*)",
+      "Bash(pnpm:*)",
+      "Bash(bun:*)",
+      "Bash(git:*)",
+      "Bash(cargo:*)",
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(node:*)",
+      "Bash(deno:*)",
+      "Bash(make:*)",
+      "Bash(docker:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(touch:*)",
+      "Bash(chmod:*)",
+      "Bash(code:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:npmjs.org)",
+      "WebFetch(domain:docs.npmjs.com)",
+      "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:developer.mozilla.org)",
+      "mcp__notion__*",
+      "Skill(superpowers:*)",
+      "Skill(error-memory:*)",
+      "Skill(llm-doc-writer:*)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets/**)",
+      "Read(**/.aws/**)",
+      "Read(**/credentials*)",
+      "Bash(rm -rf /*:*)",
+      "Bash(sudo rm:*)"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/skill-activation-prompt/hook.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Skill|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ~/.claude/hooks/usage-tracker/track-usage.py"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "ralph-wiggum@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@superpowers-marketplace": true
+  },
+  "alwaysThinkingEnabled": true,
+  "statusLine": {
+    "type": "command",
+    "command": "npx ccstatusline@latest"
+  }
+}

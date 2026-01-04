@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "skills": {
+    "llm-doc-writer": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "documentation",
+          "docs",
+          "doc",
+          "readme",
+          "README",
+          "claude.md",
+          "CLAUDE.md",
+          "doc technique",
+          "technical doc",
+          "technical documentation",
+          "agent instructions",
+          "instructions agent",
+          "guide",
+          "manuel",
+          "manual",
+          "wiki",
+          "howto",
+          "how-to",
+          "tutorial",
+          "tutoriel",
+          "reference doc"
+        ],
+        "intentPatterns": [
+          "créer.*doc",
+          "create.*doc",
+          "write.*doc",
+          "rédiger.*doc",
+          "update.*readme",
+          "mettre à jour.*readme",
+          "documentation.*llm",
+          "doc.*pour.*claude",
+          "doc.*optimis"
+        ]
+      }
+    }
+  }
+}

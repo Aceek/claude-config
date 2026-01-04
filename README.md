@@ -21,7 +21,10 @@ Le script :
 
 | Nom | Description | Model |
 |-----|-------------|-------|
+| `backend-architect` | Architecture backend, API design, microservices | sonnet |
+| `code-reviewer` | Review code : qualité, sécurité, maintenabilité | sonnet |
 | `doc-writer` | Rédacteur documentation technique optimisée LLM | sonnet |
+| `frontend-developer` | Développement React, responsive design, a11y | sonnet |
 
 ### Skills
 

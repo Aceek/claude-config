@@ -1,0 +1,20 @@
+# Dépendances
+src/hooks/**/node_modules/
+src/hooks/**/package-lock.json
+
+# Fichiers locaux Claude
+*.local.json
+*.local.md
+.credentials.json
+
+# Caches Python
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

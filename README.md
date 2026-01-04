@@ -1,0 +1,3 @@
+# Claude Code Config
+
+Configuration en cours de setup...
